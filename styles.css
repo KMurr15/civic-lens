@@ -93,7 +93,6 @@ body.dark-mode {
 }
 
 /* ----- Global Styles ----- */
-/* ///ADD/// Skip Link Styles */
 #skip {
   position: absolute;
   top: auto;
@@ -110,18 +109,40 @@ body.dark-mode {
 
 /* ///ADD/// Navigation Styles */
 
-/* ///ADD/// Global Layout Styles */
+body {
+  width: 100%;
+  min-width: 400px;
+  background-color: var(--watchdog-white);
+  color: var(--truth-text);
+  font-family: var(--font-body);
+  font-size: 1em;
+  line-height: 1.5em;
+}
 
-/* ///ADD/// Global Text Styles */
+header, footer {
+  width: 100%;
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--watchdog-white)
+}
 
 /* ----- Medium Styles: 620px ----- */
-/* ///ADD/// medium styles 620px */
+
 
 /* ----- Large Styles: 920px ----- */
-/* ///ADD/// large styles 920px */
+
 
 /* ----- XLarge Styles: 1024px ----- */
-/* ///ADD/// x-large styles 1024px */
+
 
 /* ----- Queries ----- */
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
