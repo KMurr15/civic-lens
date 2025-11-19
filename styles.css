@@ -71,7 +71,7 @@ table {
   --transition: all 0.5s ease;
 }
 
-/* ----- Manual Light/Dark Mode Styles -----*/
+/* ----- Manual Light/Dark Mode Styles ----- */
 body.light-mode {
   background-color: var(--watchdog-white);
   color: var(--truth-text);
@@ -90,6 +90,7 @@ body.dark-mode {
   cursor: pointer;
 }
 
+/* ----- Global Styles ----- */
 /* ///ADD/// Skip Link Styles */
 
 /* ///ADD/// Navigation Styles */
@@ -98,16 +99,16 @@ body.dark-mode {
 
 /* ///ADD/// Global Text Styles */
 
-
+/* ----- Medium Styles: 620px ----- */
 /* ///ADD/// medium styles 620px */
 
-
+/* ----- Large Styles: 920px ----- */
 /* ///ADD/// large styles 920px */
 
-
+/* ----- XLarge Styles: 1024px ----- */
 /* ///ADD/// x-large styles 1024px */
 
-
+/* ----- Queries ----- */
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
 
