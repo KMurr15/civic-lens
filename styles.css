@@ -76,10 +76,12 @@ body.light-mode {
   background-color: var(--watchdog-white);
   color: var(--truth-text);
 }
+
 body.dark-mode {
   background-color: var(--truth-text);
   color: var(--watchdog-white);
 }
+
 #theme-toggle {
   position: absolute;
   top: 1rem;
@@ -92,6 +94,19 @@ body.dark-mode {
 
 /* ----- Global Styles ----- */
 /* ///ADD/// Skip Link Styles */
+#skip {
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip:focus {
+  position: relative;
+  width: auto;
+  height: auto;
+}
 
 /* ///ADD/// Navigation Styles */
 
