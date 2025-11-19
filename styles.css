@@ -93,6 +93,7 @@ body.dark-mode {
 }
 
 /* ----- Global Styles ----- */
+/* --- Skip Link --- */
 #skip {
   position: absolute;
   top: auto;
@@ -107,8 +108,17 @@ body.dark-mode {
   height: auto;
 }
 
-/* ///ADD/// Navigation Styles */
+/* --- Nav --- */
+nav ul {
+  list-style: none;
+  height: 0;
+}
 
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+/* --- Body --- */
 body {
   width: 100%;
   min-width: 400px;
@@ -150,5 +160,7 @@ a {
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  #menu-toggle:checked ~ ul { 
+    height: 100%;
+  }
 }
