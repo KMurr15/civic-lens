@@ -62,7 +62,7 @@
         <article>
           <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
           <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
-          
+
           <video controls>
             <source src="videos/voter-suppression.mp4" type="video/mp4">
           </video>
@@ -133,24 +133,45 @@
     </section>
         
     <section id="alerts">
-    <h2>Stay Informed. Stay Empowered.</h2>
-      Receive text messages with the news you want to know.
+      <h2>Stay Informed. Stay Empowered.</h2>
+      <p>Receive text messages with the news you want to know.</p>
       
-      Name
-      
-      Mobile
-      
-      Notification Preferences
-      
-      Breaking News
-      Politics
-      Weather
-      Sports
-      Entertainment
-      World
-      Financial
-      
-      Subscribe
+      <form action="post" and method="https://wp.zybooks.com/form-viewer.php">
+        <label for="user-name">Name</label>
+        <input type="text" name="user-name" id="user-name" autocomplete required>
+        
+        <label for="user-phone">Mobile</label>
+        <input type="tel" name="user-phone" id="user-phone" autocomplete required>
+        
+        <fieldset>
+          <legend>Notification Preferences</legend>
+          
+          <input type="checkbox" name="notify-breaking-news" id="notify-breaking-news">
+          <label for="notify-breaking-news">Breaking News</label>
+          
+          <input type="checkbox" name="notify-politics" id="notify-politics">
+          <label for="notify-politics">Politics</label>
+          
+          <input type="checkbox" name="notify-politics" id="notify-politics">
+          <label for="">Weather</label>
+          
+          <input type="checkbox" name="notify-sports" id="notify-sports">
+          <label for="notify-sports">Sports</label>
+          
+          <input type="checkbox" name="notify-entertainment" id="notify-entertainment">
+          <label for="notify-entertainment">Entertainment</label>
+          
+          <input type="checkbox" name="notify-world" id="notify-world">
+          <label for="notify-world">World</label>
+          
+          <input type="checkbox" name="notify-financial" id="notify-financial">
+          <label for="notify-financial">Financial</label>
+        </fieldset>
+        
+        <div>
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
     </section>
   </main>
       
