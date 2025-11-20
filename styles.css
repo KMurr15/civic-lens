@@ -115,16 +115,18 @@ nav {
 .menu-button {
   display: block;
   background-color: var(--news-flash);
+  border: 1px solid var(--blue-bulletin);
   text-transform: uppercase;
   text-align: center;
   margin: 1rem 1rem 0.5rem;
   padding: 0.5rem;
+  transition: all 300ms ease-in-out;
 }
 
 .menu {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
+  align-content: space-evenly;
   position: absolute;
   left: 0;
   right: 0;
@@ -132,13 +134,23 @@ nav {
   overflow: hidden;
   background-color: var(--blue-bulletin);
   margin: 0 1rem;
-  padding: 0 1px;
+  padding: 0 2px;
 }
 
 nav a {
+  display: block;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
+  transition: all 300ms ease-in-out;
+}
+
+nav a:hover, .menu-button:hover {
+  background-color: var(--blue-bulletin);
+  border: 1px solid var(--news-flash);
 }
 
 /* --- Body --- */
@@ -150,6 +162,10 @@ body {
   font-family: var(--font-body);
   font-size: 1em;
   line-height: 1.5em;
+}
+
+a {
+  cursor: pointer;
 }
 
 header, footer {
@@ -202,6 +218,6 @@ input[type=checkbox] {
 /* --- Menu Toggle --- */
 @supports (selector(:has(*))) {
   #menu-toggle:checked ~ ul { 
-    height: 150px;
+    height: 175px;
   }
 }
