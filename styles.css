@@ -97,28 +97,19 @@ body.dark-mode {
 #skip {
   position: absolute;
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: 0;
+  height: 0;
   overflow: hidden;
 }
 
 #skip:focus {
-  position: relative;
   width: auto;
   height: auto;
 }
 
 /* --- Nav --- */
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  position: absolute;
-  height: 0;
-  margin: 0 1rem;
-  overflow: hidden;
-  background-color: var(--blue-bulletin);
+nav {
+  width: 100%;
 }
 
 .menu-button {
@@ -126,15 +117,28 @@ nav ul {
   background-color: var(--news-flash);
   text-transform: uppercase;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem 1rem 0.5rem;
+  padding: 0.5rem;
 }
 
-a {
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: var(--blue-bulletin);
+  margin: 0 1rem;
+  padding: 0 1px;
+}
+
+nav a {
   text-decoration: none;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
-  text-align: center;
-  margin: 1rem;
 }
 
 /* --- Body --- */
@@ -154,9 +158,28 @@ header, footer {
   color: var(--watchdog-white);
 }
 
+header {
+  padding-bottom: 0.5rem;
+}
+
+header p {
+  padding-left: 1rem;
+}
+
 h1, h2, h3 {
   font-family: var(--font-heading);
-  font-weight: bold;
+  font-variation-settings: "wght" 50;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 2rem 1rem 1.5rem;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: 1em;
+  font-variation-settings: "wdth" 50;
 }
 
 input[type=checkbox] {
@@ -179,6 +202,6 @@ input[type=checkbox] {
 /* --- Menu Toggle --- */
 @supports (selector(:has(*))) {
   #menu-toggle:checked ~ ul { 
-    height: 100px;
+    height: 150px;
   }
 }
