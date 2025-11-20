@@ -139,7 +139,6 @@ nav a {
   display: block;
   padding: 0.5rem 0.25rem;
   text-align: center;
-  text-transform: uppercase;
   transition: all 300ms ease-in-out;
 }
 
@@ -161,6 +160,7 @@ body {
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
 }
@@ -223,7 +223,6 @@ blockquote.tagline {
 article {
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow);
   padding: 1rem;
   margin: 0 0.5rem 0.5rem;
   transition: transform 400ms ease-in-out;
@@ -237,10 +236,11 @@ article p {
   padding-top: 0.5rem;
 }
 
-#breaking-news article {
+#breaking-news article, form {
   background-color: var(--news-flash);
   color: var(--watchdog-white);
   border: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
 }
 
 #breaking-news h3 {
@@ -253,6 +253,7 @@ article p {
 
 #featured-articles article {
   border: 1px solid var(--story-subtitle);
+  box-shadow: var(--shadow);
 }
 
 #featured-articles h3 {
@@ -261,6 +262,47 @@ article p {
 
 article:hover {
   transform: scale(1.05);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 0.5rem 1rem;
+  padding: 1rem;
+}
+
+input#user-name, input#user-phone {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--blue-bulletin);
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  row-gap: 1rem;
+  align-items: end;
+  padding: 0.75em 0;
+}
+
+legend {
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+fieldset input {
+  height: 1.25rem;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
 }
 
 /* ----- Medium Styles: 620px ----- */
