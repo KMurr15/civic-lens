@@ -142,7 +142,7 @@ nav a {
   transition: all 300ms ease-in-out;
 }
 
-nav a:hover, .menu-button:hover {
+nav a:hover, .menu-button:hover, footer a:hover{
   background-color: var(--blue-bulletin);
   border: 1px solid var(--news-flash);
 }
@@ -262,12 +262,13 @@ article p {
 
 article:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 form {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 0.5rem 1rem;
+  margin: 0.25rem 0.5rem 1rem;
   padding: 1rem;
 }
 
@@ -290,8 +291,11 @@ legend {
   margin-left: 0.5rem;
 }
 
-fieldset input {
+form input[type="checkbox"] {
   height: 1.25rem;
+}
+
+form input[type="checkbox"] {
 }
 
 form button {
@@ -303,6 +307,35 @@ form button {
   color: var(--watchdog-white);
   box-shadow: var(--shadow);
   padding: 0.5rem;
+  transition: all 300ms ease-in-out;
+}
+
+form button:hover {
+  background-color: var(--watchdog-white);
+  color: var(--blue-bulletin);
+  border: 1px solid var(--blue-bulletin);
+  cursor: pointer;
+}
+
+footer {
+  padding: 1rem 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  margin: 1rem 1rem 3rem 0;
+}
+
+footer a {
+  padding: 0.5rem;  
+  transition: all 300ms ease-in-out;
+}
+
+footer p {
+  text-align: center;
 }
 
 /* ----- Medium Styles: 620px ----- */
