@@ -191,7 +191,6 @@ h3 {
 }
 
 header, footer {
-  width: 100%;
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
 }
@@ -347,6 +346,7 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    row-gap: 0.5rem;
   }
 
   #breaking-news h2, #featured-articles h2 {
@@ -379,10 +379,36 @@ footer p {
 }
 
 /* ----- Large Styles: 920px ----- */
+@media screen and (min-width: 920px) {
+  #featured-articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
+  fieldset {
+    grid-template-columns: 2rem 1fr 2rem 1fr 2rem 1fr;
+  }
+}
 
 /* ----- XLarge Styles: 1024px ----- */
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+  }
 
+  header > *, footer > *{
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    margin-left: 0;
+  }
+
+  footer ul {
+    margin: 1rem auto 3rem;
+  }
+}
 
 /* ----- Queries ----- */
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
