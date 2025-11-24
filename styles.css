@@ -411,8 +411,22 @@ footer p {
 }
 
 /* ----- Queries ----- */
-/* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: dark) {
+  body { 
+    background: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  article {
+  transition: transform 800ms ease-in-out;
+  }
+
+  footer a { 
+  transition: all 800ms ease-in-out;
+  }
+}
 
 /* --- Menu Toggle --- */
 @supports (selector(:has(*))) {
